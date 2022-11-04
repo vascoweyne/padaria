@@ -1,5 +1,5 @@
 import { v4 as uuid, v4 } from 'uuid';
-import { IsNotEmpty,IsString } from 'class-validator';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class CategoriaDto {
   id: string;
@@ -8,7 +8,5 @@ export class CategoriaDto {
   @IsString()
   nome: string;
 
-  
-  produtos: [] = [];
-
+  produtos: [string];
 }
