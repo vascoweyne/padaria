@@ -1,9 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
+import { CategoriaService } from 'src/categoria/categoria.service';
 
 @Injectable()
 export class ProdutoService {
+  // constructor(readonly categoriaService: CategoriaService) {}
+  //@Inject(CategoriaService)
   create(createProdutoDto: CreateProdutoDto) {
     return 'This action adds a new produto';
   }
