@@ -1,5 +1,5 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { CreateProdutoDto } from './dto/create-produto.dto';
+import { forwardRef, Inject, Injectable } from '@nestjs/common';
+import { ProdutoDto } from './dto/create-produto.dto';
 import { UpdateProdutoDto } from './dto/update-produto.dto';
 import { CategoriaService } from 'src/categoria/categoria.service';
 
@@ -7,9 +7,11 @@ import { CategoriaService } from 'src/categoria/categoria.service';
 export class ProdutoService {
   // constructor(readonly categoriaService: CategoriaService) {}
   //@Inject(CategoriaService)
-  create(createProdutoDto: CreateProdutoDto) {
+  create(createProdutoDto: ProdutoDto) {
     return 'This action adds a new produto';
   }
+ 
+  
 
   findAll() {
     return `This action returns all produto`;
@@ -26,4 +28,16 @@ export class ProdutoService {
   remove(id: number) {
     return `This action removes a #${id} produto`;
   }
+}
+export class CatsService {
+  constructor(
+    @Inject(forwardRef(() => CommonService))
+    private commonService: CommonService,
+  ) {}
+}
+export class CommonService {
+  constructor(
+    @Inject(forwardRef(() => CatsService))
+    private catsService: CatsService,
+  ) {}
 }

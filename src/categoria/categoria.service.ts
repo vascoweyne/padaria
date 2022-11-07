@@ -1,4 +1,4 @@
-import { Injectable, HttpStatus, HttpException } from '@nestjs/common';
+import { Injectable, HttpStatus, HttpException, Inject, forwardRef } from '@nestjs/common';
 import { CategoriaDto } from './dto/create-categoria.dto';
 import { v4 as uuid, v4 } from 'uuid';
 
@@ -10,6 +10,9 @@ export class CategoriaService {
     return str[0].toUpperCase() + str.slice(1);
   }
 
+ 
+ 
+              
   create(createCategoria: CategoriaDto) {
     try {
       const { nome, produtos } = createCategoria;
@@ -58,4 +61,16 @@ export class CategoriaService {
     categorias.splice(categoriaIndex, 1);
     return `Categoria ${categoria.nome} deletada com sucesso`;
   }
+}
+export class CatsService {
+  constructor(
+    @Inject(forwardRef(() => CommonService))
+    private commonService: CommonService,
+  ) {}
+}
+export class CommonService {
+  constructor(
+    @Inject(forwardRef(() => CatsService))
+    private catsService: CatsService,
+  ) {}
 }
