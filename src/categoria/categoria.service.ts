@@ -8,11 +8,7 @@ const categorias = [];
 export class CategoriaService {
   capitalizeFirstLetter(str) {
     return str[0].toUpperCase() + str.slice(1);
-  }
-
- 
- 
-              
+  }           
   create(createCategoria: CategoriaDto) {
     try {
       const { nome, produtos } = createCategoria;
@@ -61,16 +57,4 @@ export class CategoriaService {
     categorias.splice(categoriaIndex, 1);
     return `Categoria ${categoria.nome} deletada com sucesso`;
   }
-}
-export class CatsService {
-  constructor(
-    @Inject(forwardRef(() => CommonService))
-    private commonService: CommonService,
-  ) {}
-}
-export class CommonService {
-  constructor(
-    @Inject(forwardRef(() => CatsService))
-    private catsService: CatsService,
-  ) {}
 }

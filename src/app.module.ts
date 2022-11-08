@@ -1,19 +1,16 @@
+import { CategoriaService } from 'src/categoria/categoria.service';
+import { ProdutoService } from './produto/produto.service';
+import { ProdutoModule } from 'src/produto/produto.module';
+import { CategoriaModule } from 'src/categoria/categoria.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CategoriaModule } from './categoria/categoria.module';
-import { CategoriaService } from './categoria/categoria.service';
-import { PrismaModule } from './prisma/prisma.module';
-import { PrismaService } from './prisma/prisma.service';
-import { ProdutoModule } from './produto/produto.module';
-import { ProdutoService } from './produto/produto.service';
-import { UserModule } from './user/user.module';
 
 
 @Module({
-  imports: [CategoriaModule, ProdutoModule, PrismaModule, UserModule  ],
+  imports: [CategoriaModule, ProdutoModule],
   controllers: [AppController],
-  providers: [AppService, CategoriaService, ProdutoService, PrismaService],
+  providers: [AppService, CategoriaService, ProdutoService,],
   
 })
 export class AppModule {}
