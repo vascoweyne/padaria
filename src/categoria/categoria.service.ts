@@ -11,7 +11,7 @@ export class CategoriaService {
   }           
   create(createCategoria: CategoriaDto) {
     try {
-      const { nome, produtos } = createCategoria;
+       const { nome, produtos } = createCategoria;
       const categoria = {
         id: uuid(),
         nome: this.capitalizeFirstLetter(nome),

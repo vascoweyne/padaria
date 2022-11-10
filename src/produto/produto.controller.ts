@@ -9,15 +9,15 @@ import {
 } from '@nestjs/common';
 import { ProdutoService } from './produto.service';
 import { ProdutoDto } from './dto/create-produto.dto';
-import { UpdateProdutoDto } from './dto/update-produto.dto';
+ import { UpdateProdutoDto } from './dto/update-produto.dto';
 
 @Controller('produto')
 export class ProdutoController {
   constructor(private readonly produtoService: ProdutoService) {}
 
   @Post()
-  create() {
-    return this.produtoService.create();
+  create(@Body() createProdutoDto: ProdutoDto) {
+    return this.produtoService.create(createProdutoDto);
   }
 
   @Get()
@@ -27,16 +27,16 @@ export class ProdutoController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.produtoService.findOne(+id);
+    return this.produtoService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateProdutoDto: UpdateProdutoDto) {
-    return this.produtoService.update(+id, updateProdutoDto);
+    return this.produtoService.update(id, updateProdutoDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.produtoService.remove(+id);
+    return this.produtoService.remove(id);
   }
 }
