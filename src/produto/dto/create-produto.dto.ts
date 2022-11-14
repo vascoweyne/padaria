@@ -11,5 +11,4 @@ export class ProdutoDto extends CategoriaDto {
   
   CategoriaDto: CategoriaDto;
 
-  prod: [string];
 }

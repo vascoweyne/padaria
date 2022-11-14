@@ -16,13 +16,12 @@ export class ProdutoService {
   create(createProduto: ProdutoDto) {
 
     try {
-      const { nome, prod } = createProduto;
+      const { nome } = createProduto;
       
       const produto = {
        CategoriaDto: CategoriaDto,
         id: uuid(),
-        nome: this.capitalizeFirstLetter(nome),
-        produto: prod,
+        nome: this.capitalizeFirstLetter(nome)
       };
       const produtoExiste =produtos.some(
         (produto) => produto.nome === nome,
