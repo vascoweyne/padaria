@@ -24,6 +24,7 @@ function getLoginForm(){
 }
 
   async function enviarLoginParaApi(user) {
+    try{
       const resposta = await fetch('http://localhost:3000/user', {
         method: 'POST',
         headers: {
@@ -38,6 +39,9 @@ function getLoginForm(){
        }else{
          console.log('error');
        }
+      }catch(error) {
+        console.log(error);
+      }
       console.log(resposta);
   }
 

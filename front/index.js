@@ -39,6 +39,7 @@ async function criarProduto(create) {
 }
 
 async function lerProduto(create) {
+  try {
   const resposta = await fetch('http://localhost:3000/produto', {
     method: 'GET',
     headers: {
@@ -53,8 +54,14 @@ async function lerProduto(create) {
    }else{
      console.log('error');
    }
+   }catch (error) {
+      console.log(error);
+   }
   console.log(resposta);
 }
+
+
+
 
 
 //  async function produto (){$.get("http://localhost:3000/produto", function (data) {}).done(function (
