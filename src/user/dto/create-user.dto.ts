@@ -20,7 +20,7 @@ export class CreateUserDto extends User {
   password: string;
 
   //@IsString()
-  nome: string;
+  //nome: string;
 
   
 }

@@ -6,7 +6,7 @@ const usuarios = [];
 @Injectable()
 export class UserService {
   async create(createUserDto: CreateUserDto) {
-      const { name, email, password } = createUserDto;
+      const { email, password } = createUserDto;
       const usuario = {
         user: usuarios,
         password: 123456,

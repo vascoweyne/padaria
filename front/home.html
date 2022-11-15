@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt"> 
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="text-center">Padaria Application</h1>
+        <form onsubmit="create_user()" name="userForm">
+            <div class="form-group">
+                <input class="form-control" type="text" name="id" autocomplete="off" value="ID" disabled>
+                <input class="form-control" type="text" name="categoria" placeholder="categoria" autocomplete="off">
+                <input class="form-control" type="text" name="id" autocomplete="off" value="ID" disabled>
+                <input class="form-control" type="text" name="produto" placeholder="produto" autocomplete="off">
+                <div class="d-flex justify-content-center">
+                    <button type="submit" id="create" class="btn btn-success" >Create</button>
+                    <button type="button" id="read" class="btn btn-info" onclick="read_data()">Read</button>
+                    <button id="update" class="btn btn-warning" onclick="update_user()" type="button">Update</button>
+                    <button id="delete" type="button" class="btn btn-danger" onclick="delete_all()">Delete</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Categoria</th>
+                    <th>ID</th>
+                    <th>Produto</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
