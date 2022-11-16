@@ -7,15 +7,16 @@
     <div class="container">
 
         <h1 class="text-center">Padaria Application</h1>
-        <form onsubmit="create_user()" name="userForm">
+        <form  name="userForm">
             <div class="form-group">
                 <input class="form-control" type="text" name="id" autocomplete="off" value="ID" disabled>
                 <input class="form-control" type="text" name="categoria" placeholder="categoria" autocomplete="off">
+                <ul id="lista"></ulid>
                 <input class="form-control" type="text" name="id" autocomplete="off" value="ID" disabled>
                 <input class="form-control" type="text" name="produto" placeholder="produto" autocomplete="off">
                 <div class="d-flex justify-content-center">
-                    <button type="submit" id="create" class="btn btn-success" >Create</button>
-                    <button type="button" id="create" class="btn btn-info" >Read</button>
+                    <button onclick="fetchApiDataCategoria()" onclick="fetchApiDataProduto()" type="submit" id="create" class="btn btn-success" >Create</button>
+                    <button onclick="fetchApiDataCategoria()" onclick="fetchApiDataProduto()" type="button" id="create" class="btn btn-info" >Read</button>
                     <button id="update" class="btn btn-warning" type="button">Update</button>
                     <button id="delete" type="button" class="btn btn-danger">Delete</button>
                 </div>
@@ -37,6 +38,6 @@
         </table>
 
     </div>
-    <script src="index.js"></script>
+   <script src="index.js"></script>
 </body>
 </html>
