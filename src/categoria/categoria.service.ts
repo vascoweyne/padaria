@@ -31,7 +31,9 @@ export class CategoriaService {
       categorias.push(categoria);
       return `Categoria "${categoria.nome}" criada com sucesso`;
     } catch (error) {
+      console.log(error);
       throw new HttpException(error, HttpStatus.BAD_REQUEST);
+      
     }
   }
 

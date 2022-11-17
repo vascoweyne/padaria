@@ -1,44 +1,48 @@
-// async function pegarApi () {try {
-// $.post("http://localhost:3000/categoria", function (data) {}).done(function (
-//   data
-// ) {
-//   data.forEach((element) => {
-//     console.log(element);
-//     document.querySelector(
-//       "#products-list"
-//     ).innerHTML += `<li>${element.nome}, ${element.id}</li>`;
-//   });
-// });
-// }catch(error){
-//   throw new Error(error);
-// }
-// }
+//post
+async function fetchApiDataCategoria(event) {
+  try {
+    event.preventDefault();
+    const body = {
+      nome: document.querySelector('#categoria').value,
+      produtos: document.querySelector('#produto').value
+    };
 
-
-
-async function fetchApiDataCategoria(event){
-  try{
-    event.preventDefault()
-    fetch('http://localhost:3000/categoria', {
+    await fetch('http://localhost:3000/categoria', {
       method: 'POST',
+      body: JSON.stringify(body),
       headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      body: JSON.stringify(event )
-    }
-    })
-    .then(response => {
-      response.json()
-      console.log(response.json());
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => {
+      console.log(response);
+      console.log(body);
 
 
-    })
-     function coletar(data) {data.forEach((element) => {
-      console.log(element);
-      document.querySelector("#products-list")
-  
-    }).innerHTML += `<li>${element.nome}, ${element.id}</li>`;}
-  }catch(error) {
-    throw new Error(error)
+    });
+  } catch (error) {
+    throw new Error(error);
   }
- }
+}
+
+//get
+async function lerApiDataCategoria(event) {
+  try {
+    event.preventDefault();
+    await fetch('http://localhost:3000/categoria', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }).then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+       document.getElementById("retorno").innerHTML = data[0].produtos
+    })
+  } catch (error) {
+    throw new Error(error);
+  }
+}

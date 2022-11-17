@@ -16,6 +16,7 @@ export class CategoriaController {
 
   @Post()
   create(@Body() createCategoriaDto: CategoriaDto) {
+    console.log(createCategoriaDto);
     return this.categoriaService.create(createCategoriaDto);
   }
 
