@@ -28,10 +28,10 @@ function getLoginForm(){
       const resposta = await fetch('http://localhost:3000/user', {
         method: 'POST',
         headers: {
+        body: JSON.stringify(user),
           Accept: 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(user)
       })
        if(resposta.status === 201){
          limparCampos()
@@ -40,31 +40,14 @@ function getLoginForm(){
          console.log('error');
        }
       }catch(error) {
-        console.log(error);
+        throw new Error(error);
       }
-      console.log(resposta);
+
+      console.log("Usuario criado com sucesso");
+      
   }
 
     function limparCampos(){
         document.querySelector('#email').value = ''
         document.querySelector('#senha').value = ''
     }
-
-
-    
-
-// function categoria(){
-// fetch(`http://localhost:3000/categoria`).then(resposta =>{
-//   return resposta.json()
-// }).then(corpo=>{
-//   console.log(corpo);
-// })
-// }
-
-// function produto(){
-//   fetch(`http://localhost:3000/produto`).then(resposta =>{
-//   return resposta.json()
-// }).then(corpo=>{
-//   console.log(corpo);
-// })
-// }

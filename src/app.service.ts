@@ -4,6 +4,6 @@ import { homedir } from 'os';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'PADARIA EM CONSTRUÇÃO';
+    return 'Bem vindo a Padaria';
   }
 }

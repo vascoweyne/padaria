@@ -16,7 +16,7 @@ async function bootstrap() {
   app.enableCors(options);
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(process.env.PORT || 3000);
-  console.log(`App Rodando na porta ${port}`);
+  console.log(`Padaria App Rodando na porta ${port}`);
 }
 bootstrap();
 
