@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt"> 
+<html>
+    
 <head>
-  <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+
+
+   
 </head>
+
 <body>
-    <script src="index.js"></script>
-    <div class="container">
 
-        <h1 class="text-center">Padaria Application</h1>
-        <div class="p-5 bg-image" style="
-        background-image: url('https://st2.depositphotos.com/1027198/8127/i/450/depositphotos_81270964-stock-photo-croissant-and-various-bread.jpg');
-        height: 300px;
-        "></div>
-        <form  name="userForm">
-            <div class="form-group">
-                <input class="form-control" type="text" id="categoria" name="categoria" placeholder="categoria" autocomplete="off">
-                <input class="form-control" type="text" id="produto"name="produto" placeholder="produto" autocomplete="off">
-                <div>
-                    <button onclick="fetchApiDataCategoria(event)"  type="submit" id="create"  >Create</button>
-                    <button onclick="lerApiDataCategoria(event)"  type="button" id="read"  >Read</button>
-                    <button id="update"  type="button">Update</button>
-                    <button id="delete" type="button" class="btn btn-danger">Delete</button>
-                </div>
-            </div>
-        </form>
-    <p id="retorno"></p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>ID</th>
-                    <th>Categoria</th>
-                    <th>ID</th>
-                    <th>Produto</th>
-                </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
-        </table>
+    <section id="home" class="main-banner" style="background: url('images/fundopadaria.jpg')" >
+        <div class="heading">
+            <h1 class="wow flipInX">Welcome to bakery System</h1>
+            
+            <a href="Login.html"><button class="btn btn-outline-success my-2 my-sm-0 wow bounce" id="btnlogin" type="submit">Login in</button></a><br><br>
+           
+        </div>
+    </section>
+    
 
-    </div>
-   <script src="index.js"></script>
+    
+
+        <script>
+    function check(input) {
+        if (document.getElementById('password').value != document.getElementById('comfirm-password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } 
+    }
+    </script>
 </body>
+
+
 </html>

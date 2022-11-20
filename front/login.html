@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<body>
-<section class="text-center">
-    <div class="p-5 bg-image" style="
-          background-image: url('https://st2.depositphotos.com/1027198/8127/i/450/depositphotos_81270964-stock-photo-croissant-and-various-bread.jpg');
-          height: 300px;
-          "></div>
-    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-          margin-top: -100px;
-          background: hsla(0, 0%, 100%, 0.8);
-          backdrop-filter: blur(30px);
-          ">
-      <div class="card-body py-5 px-md-5">
-  
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="fw-bold mb-5">Padaria</h2>
-            <form onsubmit="enviarLoginParaApi()">
-              <div class="form-outline mb-4">
-                <input type="email" id="email" class="form-control" />
-                <label class="form-label" for="form3Example3">Email address</label>
-              </div>
-              <div class="form-outline mb-4">
-                <input type="password" id="senha" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
-              </div>
-              <button type="submit" onclick="enviarLoginParaApi(user)" id="salvar" class="btn btn-primary btn-block mb-4">
-                Sign up
-              </button>
-            </form>
-          </div>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Login</title>
+    
+     
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#blog"><a href="crud.html"><h5>Home</h5></a></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script> 
+    </nav> -->
+<!--     
+     <script src="script.js"></script> -->
+
+</head>
+
+<body>
+    <script src="script.js"></script>
+     <section id="Login" class="main-banner" style="background: url('images/fundopadaria.jpg')" >
+        <div class="oo"></div>
+          <div class="formRegister">
+			<form class="form-detail" name="myForm" method="post" onsubmit=" Login()">
+              
+				<h2 class="wow flipInX">Bakery login</h2>
+				<div class="form-row">
+					<input type="text" id="Name"
+                        name="username" class="input-text" placeholder="Email">
+                    
+				</div>
+				<div class="form-row">
+					<input type="password" name="password" id="password" class="input-text" placeholder="Password" >
+				</div>
+				<div classq="form-row-btn wow rollIn">
+                    <!-- <input type="submit" class="register" value="Login"  > -->
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#blog"><a href="crud.html"><h5>Login</h5></a></a>
+                        </li>
+                    </ul>
+				</div>
+			</form>
+		</div>
+    </section>
+    
+   
+ 
+    
 </body>
+</html>

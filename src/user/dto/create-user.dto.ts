@@ -15,12 +15,10 @@ export class CreateUserDto extends User {
   //@MinLength(4)
   //@MaxLength(20)
   //@Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
-    //message: 'password too weak',
+  //message: 'password too weak',
   //})
   password: string;
 
   //@IsString()
   //nome: string;
-
-  
 }
