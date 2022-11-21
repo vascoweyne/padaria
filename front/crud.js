@@ -66,11 +66,20 @@ async function deletarCategoriaProduto(event) {
 async function uptadeCategoriaProduto(event) {
   try {
     event.preventDefault();
-    const up = document.querySelector('#id').value
-    await fetch(`http://localhost:3000/categoria/${up}`, {
+    await fetch(`http://localhost:3000/categoria/${id}`, {
       method: 'PATCH',
+      body: JSON.stringify({
+        id: document.querySelector('#id').value,
+        nome: document.querySelector('#categoria').value
+      }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
     }).then((response) => {
       return response.json();
+     }).then((data) => {
+       console.log(data);
     })
     alert('categoria atualizada com sucesso')
   } catch (error) {
