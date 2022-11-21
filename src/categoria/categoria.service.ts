@@ -57,6 +57,6 @@ export class CategoriaService {
     const categoria = categorias.find((element) => element.id === id);
     const categoriaIndex = categorias.indexOf(categoria);
     categorias.splice(categoriaIndex, 1);
-    return `Categoria ${categoria.nome} deletada com sucesso`;
+    return `Categoria ${categoria.nome || undefined } deletada com sucesso`;
   }
 }

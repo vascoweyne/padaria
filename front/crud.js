@@ -1,4 +1,4 @@
-//post
+//POST
 async function fetchApiDataCategoria(event) {
   try {
     event.preventDefault();
@@ -25,7 +25,7 @@ async function fetchApiDataCategoria(event) {
   }
 }
 
-//get
+//GET
 async function lerApiDataCategoria(event) {
   try {
     event.preventDefault();
@@ -40,9 +40,41 @@ async function lerApiDataCategoria(event) {
     })
     .then((data) => {
       console.log(data);
-       document.getElementById("retorno").innerHTML = data[0].produtos
+      document.getElementById("retorno").innerHTML = data[0].produtos
     })
   } catch (error) {
+    throw new Error(error);
+  }
+}
+
+//DELETE
+async function deletarCategoriaProduto(event) {
+  try {
+    event.preventDefault();
+    const id = document.querySelector('#id').value
+    await fetch(`http://localhost:3000/categoria/${id}`, {
+      method: 'DELETE',
+    })
+    alert('categoria deletada com sucesso')
+  } catch (error) {
+    alert('erro ao deletar a categoria')
+    throw new Error(error);
+  }
+}
+
+//UPTADE
+async function uptadeCategoriaProduto(event) {
+  try {
+    event.preventDefault();
+    const up = document.querySelector('#id').value
+    await fetch(`http://localhost:3000/categoria/${up}`, {
+      method: 'PATCH',
+    }).then((response) => {
+      return response.json();
+    })
+    alert('categoria atualizada com sucesso')
+  } catch (error) {
+    alert('erro ao atualizar a categoria')
     throw new Error(error);
   }
 }
