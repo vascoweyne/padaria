@@ -43,6 +43,7 @@ async function lerApiDataCategoria(event) {
       document.getElementById("retorno").innerHTML = data[0].produtos
     })
   } catch (error) {
+    alert('erro ao ler a categorias e produtos')
     throw new Error(error);
   }
 }
