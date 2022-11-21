@@ -21,9 +21,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     
-        <script src="categoria/categoria.controller"></script>
-    
-    
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,11 +38,12 @@
             <div class="form-group">
                 <input class="form-control" type="text" id="categoria" name="categoria" placeholder="categoria" autocomplete="off">
                 <input class="form-control" type="text" id="produto"name="produto" placeholder="produto" autocomplete="off">
+                <input class="form-control" type="text" id="id" name="id" placeholder="id" autocomplete="off">
                 <div>
-                    <button onclick="fetchApiDataCategoria(event)"  type="submit" id="create" class="btn btn-success" >Create</button>
-                    <button onclick="lerApiDataCategoria(event)"  type="button" id="read" class="btn btn-info"  >Read</button>
-                    <button id="update"  type="button" class="btn btn-warning">Update</button>
-                    <button id="delete" type="button" class="btn btn-danger">Delete</button>
+                    <button onclick="fetchApiDataCategoria(event)" type="submit" id="create" class="btn btn-success" >Create</button>
+                    <button onclick="lerApiDataCategoria(event)" type="button" id="read" class="btn btn-info"  >Read</button>
+                    <button onclick="uptadeCategoriaProduto(event)" type="button" id="update" class="btn btn-warning">Update</button>
+                    <button onclick="deletarCategoriaProduto(event)" type="button" id="delete" class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </form>
@@ -63,7 +61,6 @@
             <tbody id="data">
             </tbody>
         </table>
-
     </div>
  
    <script src="crud.js"></script>

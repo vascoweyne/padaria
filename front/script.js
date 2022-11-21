@@ -1,27 +1,16 @@
-/* global fetch */
-//const { async } = require("rxjs")
-const usr = document.querySelector('#salvar')
+// function getLoginForm(){
+//   const inputEmail = document.querySelector('#email')
+//   const inputSenha = document.querySelector('#senha')
+//   if (inputEmail.value === null || inputSenha === null){
+//     console.log('campos vazio')
+//     return;
+//   }
 
-usr.addEventListener('click', () => {
-  const user = getLoginForm()
+  // const user = {
+  //   email: inputEmail.value,
+  //   senha: inputSenha.value
+  // }
 
-  enviarLoginParaApi(user)
-})
-
-
-function getLoginForm(){
-  const inputEmail = document.querySelector('#email')
-  const inputSenha = document.querySelector('#senha')
-  if (inputEmail.value === null || inputSenha === null){
-    console.log('campos vazio')
-    return;
-  }
-
-  const user = {
-    email: inputEmail.value,
-    senha: inputSenha.value
-  }
-}
 
   async function enviarLoginParaApi(user) {
     try{
@@ -47,7 +36,7 @@ function getLoginForm(){
       
   }
 
-    function limparCampos(){
-        document.querySelector('#email').value = ''
-        document.querySelector('#senha').value = ''
-    }
+    // function limparCampos(){
+    //     document.querySelector('#email').value = ''
+    //     document.querySelector('#senha').value = ''
+    // }
