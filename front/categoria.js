@@ -49,7 +49,7 @@ async function lerApiDataCategoria(event) {
 }
 
 //DELETE
-async function deletarCategoriaProduto(event) {
+async function deletarCategoria(event) {
   try {
     event.preventDefault();
     const id = document.querySelector('#id').value
@@ -64,7 +64,7 @@ async function deletarCategoriaProduto(event) {
 }
 
 //UPTADE
-async function uptadeCategoriaProduto(event) {
+async function uptadeCategoria(event) {
   try {
     event.preventDefault();
     await fetch(`http://localhost:3000/categoria/${id}`, {
