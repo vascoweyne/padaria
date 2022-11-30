@@ -3,7 +3,7 @@ async function fetchApiDataCategoria(event) {
   try {
     event.preventDefault();
     const body = {
-      nome: document.querySelector('#categoria').value,
+      categoria: document.querySelector('#categoria').value,
       produtos: document.querySelector('#produto').value
     };
 
@@ -40,7 +40,7 @@ async function lerApiDataCategoria(event) {
     })
     .then((data) => {
       console.log(data);
-      document.getElementById("retorno").innerHTML = data[0].produtos
+      document.getElementById("data").innerHTML = data[0].produtos
     })
   } catch (error) {
     alert('erro ao ler a categorias e produtos')
@@ -79,8 +79,8 @@ async function uptadeCategoriaProduto(event) {
       },
     }).then((response) => {
       return response.json();
-     }).then((data) => {
-       console.log(data);
+    //  }).then((data) => {
+    //    console.log(data);
     })
     alert('categoria atualizada com sucesso')
   } catch (error) {
