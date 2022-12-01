@@ -6,14 +6,16 @@
 //     return;
 //   }
 
-  // const user = {
-  //   email: inputEmail.value,
-  //   senha: inputSenha.value
-  // }
+  
 
 
-  async function enviarLoginParaApi(user) {
+  async function enviarLoginParaApi(event) {
     try{
+      event.preventDefault();
+      const user = {
+        email: inputEmail.value,
+        senha: inputSenha.value
+      }
       const resposta = await fetch('http://localhost:3000/user', {
         method: 'POST',
         headers: {
