@@ -5,7 +5,7 @@
         email: document.querySelector('#email'),
         senha: document.querySelector('#password')
       }
-      const resposta = await fetch('http://localhost:3000/user', {
+      await fetch('http://localhost:3000/user', {
         method: 'POST',
         headers: {
         body: JSON.stringify(user),
