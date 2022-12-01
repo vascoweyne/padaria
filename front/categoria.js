@@ -3,7 +3,7 @@ async function fetchApiDataCategoria(event) {
   try {
     event.preventDefault();
     const body = {
-      categoria: document.querySelector('#categoria').value,
+      nome: document.querySelector('#categoria').value,
       produtos: document.querySelector('#produto').value
     };
 
@@ -67,6 +67,7 @@ async function deletarCategoria(event) {
 async function uptadeCategoria(event) {
   try {
     event.preventDefault();
+    const id = document.querySelector('#id').value
     await fetch(`http://localhost:3000/categoria/${id}`, {
       method: 'PATCH',
       body: JSON.stringify({

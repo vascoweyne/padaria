@@ -67,6 +67,7 @@ async function fetchApiDataProduto(event) {
   async function uptadeProduto(event) {
     try {
       event.preventDefault();
+      const id = document.querySelector('#id').value
       await fetch(`http://localhost:3000/produto/${id}`, {
         method: 'PATCH',
         body: JSON.stringify({

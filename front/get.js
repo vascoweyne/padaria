@@ -19,4 +19,4 @@ function naTela(categoria){
     })
 }
 
-getCategoria()
+//getCategoria()
