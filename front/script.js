@@ -2,8 +2,8 @@
     try{
       event.preventDefault();
       const user = {
-        email: document.querySelector('#email'),
-        senha: document.querySelector('#password')
+        email: document.querySelector('#email').value,
+        senha: document.querySelector('#password').value
       }
       await fetch('http://localhost:3000/user', {
         method: 'POST',
