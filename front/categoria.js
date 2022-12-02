@@ -17,9 +17,8 @@ async function fetchApiDataCategoria(event) {
     }).then((response) => {
       console.log(response);
       console.log(body);
-
-
     });
+    
   } catch (error) {
     throw new Error(error);
   }
@@ -80,8 +79,6 @@ async function uptadeCategoria(event) {
       },
     }).then((response) => {
       return response.json();
-    //  }).then((data) => {
-    //    console.log(data);
     })
     alert('categoria atualizada com sucesso')
   } catch (error) {

@@ -15,6 +15,12 @@
       }).then((response) => {
         console.log(response);
         console.log(user);
+
+        // if(response === 201){
+        //   window.location.assign('crud.html');
+        // }else{
+        //   console.log('error');
+        // }
       });
        
       }catch(error) {
