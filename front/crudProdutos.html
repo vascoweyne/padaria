@@ -31,14 +31,14 @@
        
         <form  name="userForm">
             <div id="crud" class="form-group">
-                <input class="form-control" type="text" id="categoria" name="categoria" placeholder="category" autocomplete="off">
                 <input class="form-control" type="text" id="produto"name="produto" placeholder="product" autocomplete="off">
+                <input class="form-control" type="text" id="categoria" name="categoria" placeholder="category" autocomplete="off">
                 <input class="form-control" type="text" id="id" name="id" placeholder="id" autocomplete="off">
                 <div>
-                    <button onclick="fetchApiDataCategoria(event)" type="submit" id="create" class="btn btn-success" >Create</button>
-                    <button onclick="getCategoria()" type="button" id="read" class="btn btn-info"  >Read</button>
-                    <button onclick="uptadeCategoria(event)" type="button" id="update" class="btn btn-warning">Update</button>
-                    <button onclick="deletarCategoria(event)" type="button" id="delete" class="btn btn-danger">Delete</button>
+                    <button onclick="fetchApiDataProduto(event)" type="submit" id="create" class="btn btn-success" >Create</button>
+                    <button onclick=" getProduto()" type="button" id="read" class="btn btn-info"  >Read</button>
+                    <button onclick="uptadeProduto(event)" type="button" id="update" class="btn btn-warning">Update</button>
+                    <button onclick="deletarProduto(event)" type="button" id="delete" class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </form>
@@ -47,17 +47,17 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Categoria</th>
-                    <th>ID</th>
                     <th>Produto</th>
+                    <th>Categoria</th>
+                    
                 </tr>
             </thead>
-            <tbody id="data">
+            <tbody id="datap">
             </tbody>
         </table>
     </div>
 
- <script src="get.js"></script>
+ <script src="getProduto.js"></script>
 <script src="produto.js"></script>
    
 

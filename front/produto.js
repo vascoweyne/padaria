@@ -3,8 +3,8 @@ async function fetchApiDataProduto(event) {
     try {
       event.preventDefault();
       const body = {
-        nome: document.querySelector('#categoria').value,
-        produtos: document.querySelector('#produto').value
+        nome: document.querySelector('#produto').value,
+        categoria: document.querySelector('#categoria').value
       };
   
       await fetch('http://localhost:3000/produto', {
