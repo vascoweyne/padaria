@@ -1,6 +1,9 @@
 {
   "name": "padaria",
   "version": "0.0.1",
+  "engines": {
+    "node": "18.12.1"
+  },
   "description": "API rest with nestjs and js",
   "author": "vascoweyne, julianogueira",
   "private": true,
@@ -21,7 +24,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
-  "dependencies": {
+  "dependency": {
+    "@nestjs/cli": "^9.0.0",
     "@nestjs/axios": "^1.0.0",
     "@nestjs/common": "^9.2.0",
     "@nestjs/core": "^9.0.0",
@@ -47,7 +51,7 @@
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13"
   },
-  "Dependency": {
+  "devDependency": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
