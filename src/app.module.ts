@@ -7,10 +7,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { UserService } from './user/user.service';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 
 @Module({
-  imports: [CategoriaModule, ProdutoModule, UserModule],
+  imports: [CategoriaModule, ProdutoModule, UserModule, ServeStaticModule.forRoot({
+    renderPath: join(__dirname, '..', 'client'),
+  }),
+  ],
   controllers: [AppController],
   providers: [AppService, CategoriaService, ProdutoService, UserService],
   
