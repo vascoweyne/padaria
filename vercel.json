@@ -1,11 +1,10 @@
 {
     "version": 2,
     "name": "padaria",
-    "build": "next build" ,
     "cleanUrls": true,
     "routes":[
         {
-            "src": "/(.*)",
+            "src": "src/main.ts",
             "dest": "src/main.ts",
             "methods": [
                 "POST",
