@@ -1,8 +1,8 @@
 {
   "name": "padaria",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "API rest with nestjs and js",
+  "author": "vascoweyne, julianogueira",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
