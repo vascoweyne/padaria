@@ -20,7 +20,7 @@ async function bootstrap() {
 
   app.enableCors(options);
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.PORT , '0.0.0.0');
   //console.log(`Padaria App Rodando:${await app.getUrl()}`);
 }
 bootstrap();
