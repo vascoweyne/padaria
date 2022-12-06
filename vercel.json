@@ -1,7 +1,6 @@
 {
     "version": 2,
     "name": "padaria",
-    "cleanUrls": true,
     "routes":[
         {
             "src": "src/main.ts",
