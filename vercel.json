@@ -3,7 +3,7 @@
     "name": "padaria-vercel",
     "builds": [
         {
-            "src": "src/main.ts",
+            "src": "client/index.js",
             "use": "@vercel/node"
         }
     ],
