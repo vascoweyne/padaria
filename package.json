@@ -2,7 +2,7 @@
   "name": "padaria",
   "version": "0.0.1",
   "engines": {
-    "node": "18.12.1"
+    "node": "18.x"
   },
   "description": "API rest with nestjs and js",
   "author": "vascoweyne, julianogueira",
