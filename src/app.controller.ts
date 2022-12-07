@@ -6,9 +6,13 @@ import { Response } from 'express';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('index.html')
   get(@Res() res: Response){
-    res.sendFile(__dirname, './index.html');
-  }
+    res.sendFile(__dirname, './index.html'),
+    res.sendFile(__dirname, './login.html'),
+    res.sendFile(__dirname, './menu.html'),
+    res.sendFile(__dirname, './crud.html'),
+    res.sendFile(__dirname, './crudProdutos.html')
   }
 
+  }
