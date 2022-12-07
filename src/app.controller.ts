@@ -9,7 +9,7 @@ export class AppController {
   @Get('index.html')
   get(@Res() res: Response){
     res.sendFile(__dirname, './index.html'),
-    res.sendFile(__dirname, './login.html'),
+    res.sendFile(__dirname, './Login.html'),
     res.sendFile(__dirname, './menu.html'),
     res.sendFile(__dirname, './crud.html'),
     res.sendFile(__dirname, './crudProdutos.html')
