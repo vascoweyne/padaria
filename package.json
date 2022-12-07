@@ -24,7 +24,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
-  "dependency": {
+  "devDependency": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/axios": "^1.0.0",
     "@nestjs/common": "^9.2.0",
@@ -51,7 +51,7 @@
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13"
   },
-  "devDependency": {
+  "Dependency": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
@@ -96,5 +96,19 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/platform-express": "^9.2.1",
+    "@nestjs/serve-static": "^3.0.0",
+    "@nestjs/swagger": "^6.1.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "express": "^4.18.2",
+    "source-map-support": "^0.5.21"
   }
 }
